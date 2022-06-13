@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.js" integrity="sha512-fEgazVdZLNymIm9n+b2jtCrM4DQiqNTfLNUxbsGSFUJpYemf9A8GxgJ3VAfU/Lc6yZkDdEOdekBDZtG/mf73fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reset.min.css" integrity="sha512-Mjxkx+r7O/OLQeKeIBCQ2yspG1P5muhAtv/J+p2/aPnSenciZWm5Wlnt+NOUNA4SHbnBIE/R2ic0ZBiCXdQNUg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.esm.min.js" integrity="sha512-JjdNMfPFP+pPGnclwI1Qz+r9T74xBtDB/WsdJZzlmL6c95esSTLVjblc0vsGj59JUuaB8WseMvTigM6o1zvXcw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css" integrity="sha512-ITH3NSfntO7uI5n+BnxGNXpzDUoOsmAXuG37UDONLxNYIdc0EBBOOQ1xyc+t9ag9ETSuBXFApx+Rod0uURfDYw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js" integrity="sha512-131e3mIrDAyUD075SVzvIjS0g97uDg0+/qAobDHd++h+lgFi4z88DVOpidm06jpb+0PzK4kcm9w79r6EHV0SkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <pre><code class="language-xml hljs">
+        <span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+        
+        <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="language-css"><span class="hljs-selector-tag">body</span> {<span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;}</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+        
+        <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"application/javascript"</span>&gt;</span><span class="language-javascript">
+          <span class="hljs-keyword">function</span> <span class="hljs-title function_">$init</span>(<span class="hljs-params"></span>) {<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;}
+        </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+        
+        <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">checked</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"title"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'title'</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+          <span class="hljs-comment">&lt;!-- here goes the rest of the page --&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+        </code></pre>
+    <pre><code class="language-shell hljs">
+        <span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$EDITOR</span></span>
+        vim
+        <span class="hljs-meta prompt_">$ </span><span class="language-bash">git checkout main</span>
+        Switched to branch 'main'
+        Your branch is up-to-date with 'origin/main'.
+        <span class="hljs-meta prompt_">$ </span><span class="language-bash">git push</span>
+        Everything up-to-date
+        <span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">'All</span></span>
+        <span class="hljs-meta prompt_">&gt; </span><span class="language-bash"><span class="hljs-string">done!'</span></span>
+        All
+        done!
+        </code></pre>
+
+    <pre><code class="language-bash hljs">
+        <span class="hljs-meta">#!/bin/bash</span>
+
+        <span class="hljs-comment">###### CONFIG</span>
+        ACCEPTED_HOSTS=<span class="hljs-string">"/root/.hag_accepted.conf"</span>
+        BE_VERBOSE=<span class="hljs-literal">false</span>
+        
+        <span class="hljs-keyword">if</span> [ <span class="hljs-string">"<span class="hljs-variable">$UID</span>"</span> -ne 0 ]
+        <span class="hljs-keyword">then</span>
+         <span class="hljs-built_in">echo</span> <span class="hljs-string">"Superuser rights required"</span>
+         <span class="hljs-built_in">exit</span> 2
+        <span class="hljs-keyword">fi</span>
+        
+        <span class="hljs-function"><span class="hljs-title">genApacheConf</span></span>(){
+         <span class="hljs-built_in">echo</span> -e <span class="hljs-string">"# Host <span class="hljs-variable">${HOME_DIR}</span><span class="hljs-variable">$1</span>/<span class="hljs-variable">$2</span> :"</span>
+        }
+        
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">'"quoted"'</span> | <span class="hljs-built_in">tr</span> -d \" &gt; text.txt
+        </code></pre>
+
+        <script src="https://gist.github.com/gimenezsergio/89735ce557ab03cb6a7e0ae5cdbfb05e.js"></script>
+</body>
+</html>
