@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>GIT</title>
+
+<link rel="stylesheet" href="../dist/reset.css">
+<link rel="stylesheet" href="../dist/reveal.css">
+<link rel="stylesheet" href="../dist/theme/simple.css">
+
+<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<style>
+	:root {  
+  		--r-main-font-size: 30px;
+	}
+</style>
+</head>
+
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h3>Git y GitHub</h3>
+			<img src="img/git-github-logo.jpg" alt="Git y GitHub"
+					style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+		</section>
+		<section>
+			<h3>Git</h3>
+			
+				<img src="img/git-logo.png" alt="Git"
+					style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+			
+			<ul>
+				<li>Repositorio/espacio local donde guardar código</li>
+				<li>Historial de versiones</li>
+				<li>Trabajo en equipo</li>
+			</ul>
+
+		</section>
+		<section>
+			<h3>GitHub</h3>
+			<img src="img/github-logo.png" alt="GitHub"
+			style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+
+			<ul>
+				<li>Plataforma basada en la nube donde los usuarios pueden alojar repositorios Git</li>
+				<li>Poner online las páginas estáticas</li>
+				<li>Permite centralizar el contenido del repositorio para trabajar en equipo</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Instalar git</h3>
+			<img src="img/download-git-.png" alt="GitHub"
+			style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+			<ul>
+				<li><a href="https://git-scm.com/">https://git-scm.com/</a></li>
+				<li>Para windows <a href="https://www.youtube.com/watch?v=cYLapo1FFmA&ab_channel=DonEber"> instalar git bash</a>. Instala una terminal para usar git y emular los comandos de linux				</li>
+				<li>Comprobar si se instaló correctamente ejecutando: git --version</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Configuración global</h3>
+			<ul>
+				<li>git config --global user.name "Sergio Gimenez"</li>
+				<li>sergio@dell:~$ git config --global user.email "gimenezsergio123@gmail.com"</li>
+				<li>git config --global core.autocrlf input(linux)/true(win)</li>
+				<li>git config --list</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Areas del estado del código</h3>
+			<a href="">
+				<img src="img/1AWee7BOZmlocqYMqGTAWENQ2VotKERbbNv7g8gZ8L2c.png" alt="Git"
+					style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">
+			</a>
+			<ul>
+				<li><strong>Working Directory:</strong> Es un archivo modificado pero que aun no se controla, no se sigue, no se le hizo el tracking</li>
+				<li><strong>Staging area:</strong> Es un archivo modificado y que se le hace tracking</li>
+				<li><strong>Repository:</strong> Es un archivo confirmado y agregado al repositorio</li>
+			</ul>
+		</section>
+		<section>
+			<h3>Crear repositorio nuevo</h3>
+			<ol>
+				<li>git init</li>
+				<li>git status (git status -s)</li>
+				<li>git add : para agregarlos al stanging area</li>
+				<li>git rm –cached  {file}</li>
+				<li>git commit -m ""</li>
+				<li>git log (git log --oneline )</li>
+				<li>git ignore (incluir el nombre del archivo a ignorar)</li>
+			</ol>
+		</section>
+		<section>
+			<h3>Cuenta en GitHub</h3>
+			https://github.com/
+			Crear token
+			
+		</section>
+		<section>
+			<h3>Crear desde repositorio existente (GitHub)</h3>
+			<ol>
+				<li>git clone</li>
+				<li>http - hss</li>
+				<li>git add {file}</li>
+				<li>git commit -m ""</li>
+				<li>git pull: actualizar a la última versión</li>
+			</ol>
+		</section>
+		<section>
+			<h3>GitHub pages - Deploy</h3>
+			<img src="img/github-pages.png" alt="GitHub pages"
+			style="height: 580px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo">	
+		</section>
+	</div>
+</div>
+
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<!-- <script src="plugin/highlight/highlight.js"></script> -->
+<script>
+	// Also available as an ES module, see:
+	// https://revealjs.com/initialization/
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		center: true,
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+	});
+</script>
+</body>
+
+</html>
