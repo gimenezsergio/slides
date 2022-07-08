@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Javascript</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/simple.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <style>
+        :root {
+            --r-main-font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Javascript - Operadores</h3>
+                <!-- <img src="img/git-github-logo.jpg" alt="Git y GitHub" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> -->
+
+                <ul>
+                    <li>Lógicos</li>
+                    <li>Aritméticos</li>
+                    <li>Comparación</li>
+                    <li>Asignación</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Lógicos</h3>
+
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Símbolo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&amp;&amp;</code></td>
+                            <td><strong>AND</strong>: Compara dos expresiones tipo bool. Retorna true
+                                <strong>solo</strong> si las dos expresiones son true.
+                            </td>
+                            <td><code>(5 &gt; 6) &amp;&amp; (5 &lt; 6 ) //Una de las expresione es false, la otra es true. Retorna false</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>||</code></td>
+                            <td><strong>OR</strong>: Compara dos expresiones tipo bool. Retorna verdadero si al menos
+                                una de las expresiones es verdadera</td>
+                            <td><code>(5 &gt; 6) || (5 &lt; 6) //Una expresión es false, la otra true. Devuelve true</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>!</code></td>
+                            <td><strong>NOT</strong>: Devuelve el valor opuesto de la expresión tipo bool.</td>
+                            <td><code>!(5 &gt; 6) // 5 no es mayor que 6, pero "!" retornará true</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <section>
+                <h3>Comparación</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Símbolo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;</code></td>
+                            <td><strong>Menor que</strong>: Compara dos valores y retorna <code>true</code>
+                                si el valor del lado izquierdo en menor que del lado derecho.</td>
+                            <td><code>5 &lt; 6 // true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;=</code></td>
+                            <td><strong>Menor o igual que</strong>: Compara dos valores y retorna
+                                <code>true</code> si el valor del lado izquierdo en menor o igual que del lado derecho
+                            </td>
+                            <td><code>5 &lt;= 6 // true</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;</code></td>
+                            <td><strong>Mayor que</strong>: Compara dos valores y retorna <code>true</code>
+                                si el valor del lado izquierdo es mayor que del lado derecho</td>
+                            <td><code>5 &gt; 6 // false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&gt;=</code></td>
+                            <td><strong>Mayor o igual que</strong>: Compara dos valores y retorna
+                                <code>true</code> si el valor del lado izquierdo es mayor o igual que del lado derecho
+                            </td>
+                            <td><code>5 &gt;= 6 // false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>===</code></td>
+                            <td><strong>Igualdad estricta</strong>: Compara dos valores y retorna <code>true</code>
+                                si el valor de la izquierda y de la derecha son iguales y del mismo tipo.
+                            </td>
+                            <td><code>5 === 6 // false</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>!==</code></td>
+                            <td><strong>Desigualdad</strong>: Compara dos valores y retorna el valor contrario de la
+                                comparación estricta
+                            </td>
+                            <td><code>5 !== 6 // true</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>Aritméticos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Símbolo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>+</code></td>
+                            <td><strong>Más</strong>: Suma dos números
+                            </td>
+                            <td><code>z = x + y</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>-</code></td>
+                            <td><strong>Menos</strong>: Resta dos números
+                            </td>
+                            <td><code>z = x - y</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>*</code></td>
+                            <td><strong>Multiplicación</strong>: Multiplica dos números
+                            </td>
+                            <td><code>z = x * y</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>/</code></td>
+                            <td><strong>División</strong>: Divide dos números
+                            </td>
+                            <td><code>z = x / y</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>%</code></td>
+                            <td><strong>Módulo</strong>: Módulo de dos números
+                            </td>
+                            <td><code>z = x % 2</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>++</code></td>
+                            <td><strong>Incremento</strong>: Incrementa en 1 la variable
+                            </td>
+                            <td><code>x = x++</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>--</code></td>
+                            <td><strong>Decremento</strong>: Decrementa en 1 la variable
+                            </td>
+                            <td><code>x = x--</code>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>Asignación</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Símbolo</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>=</code></td>
+                            <td><strong>Igual</strong>: El valor que esté a la derecha lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>z = 3</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>+=</code></td>
+                            <td><strong>Más igual</strong>: Suma el valor de la derecha y lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>z += 5</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>-=</code></td>
+                            <td><strong>Menos igual</strong>: Resta el valor de la derecha y lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>z -= 7</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>*=</code></td>
+                            <td><strong>Por igual</strong>: Multiplica el valor de la derecha y lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>z *= 7</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>/=</code></td>
+                            <td><strong>Dividido igual</strong>: Divide el valor de la derecha y lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>z /= 2</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>%=</code></td>
+                            <td><strong>Módulo igual</strong>: Obtiene el módulo del valor de la derecha y lo asigna a la variable de la izquierda
+                            </td>
+                            <td><code>x %= 4</code>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <!-- <script src="plugin/highlight/highlight.js"></script> -->
+    <script>
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+        });
+    </script>
+</body>
+
+</html>
