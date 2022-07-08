@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Javascript</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/simple.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <style>
+        :root {
+            --r-main-font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Javascript - Estructuras de control</h3>
+                <!-- <img src="img/git-github-logo.jpg" alt="Git y GitHub" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> -->
+
+                <ul>
+                    <li>Secuencial</li>
+                    <li>Condicional</li>
+                    <li>Repetitiva</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Secuencial</h3>
+                <p>Es lo que sucede cuando ponemos una línea de código de bajo de la otra. Se ejecutarán en ese orden.
+                </p>
+            </section>
+            <section>
+                <h3>Condicional - if</h3>
+                <p>La sentencia if ejecutrá el código solamente si la condición es true. Se pueden usar operadores
+                    lógicos.</p>
+                <pre>
+                    <code>
+                        if (condition){
+                            //Condition was true. Code in this block will run.
+                        }
+                    </code>
+                </pre>
+                <p>La sentencia else ejecuatrá el código dentro del bloque cuando la condición sea falsa. Es opcional.</p>
+                <pre>
+                    <code>
+                        let currentMoney;
+                        let laptopPrice;
+
+                        if (currentMoney >= laptopPrice){
+                            //Condition was true. Code in this block will run.
+                            console.log("Getting a new laptop!");
+                        }
+                        else{
+                            //Condition was false. Code in this block will run.
+                            console.log("Can't afford a new laptop, yet!");
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Operador ternario</h3>
+                <p>condición : Una expresión que se evalúa como true o false.</p>
+                    <p>expr1, expr2: Expresión con valores de algún tipo.</p>
+                <pre>
+                    <code>
+                        condición ? expr1 : expr2
+                    </code>
+                </pre>
+                <p>Ejemplo:</p>
+                <pre>
+                    <code>
+                        "La Cuota es de:  " + (isMember ? "$2.00" : "$10.00")
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Condicional - Switch</h3>
+                <p>La sentencia switch evalúa una expresión, comparando el valor de esa expresión con una instancia case, y ejecuta declaraciones asociadas a ese case              </p>
+                <pre>
+                    <code>
+                        const expr = 'Papaya';
+                        switch (expr) {
+                        case 'Naranja':
+                            console.log('Naranja elegido');
+                            break;
+                        case 'Mango':
+                            console.log('Mango elegido');
+                            break;
+                        case 'Papaya':
+                            console.log('Papaya elegido');
+                            break;
+                        default:
+                            console.log('No se eligió ninguna opción');
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Repetitiva - for</h3>
+                <p>El for necesita tres partes para iterar:</p>
+                <ul>
+                    <li>Contador: Una variable que es inicializada con un número que va a contar la cantidad de iteraciones.</li>
+                    <li>Condición: Expresión que usar los operadores de comparación para causar que se detenga el lazo cuando la condición valga true</li>
+                    <li>Incremento: Se usa para incrementar el contador</li>
+                </ul>
+                <pre>
+                    <code>
+                        for (let i = 0; i < 10; i++) {
+                            console.log(i);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Repetitiva - While</h3>
+                <p>el ciclo while ejecuta un bloque de código mientras la condición sea true</p>
+                <pre>
+                    <code>
+                        let i = 0;
+                        while (i < 10) {
+                            console.log(i);
+                            i++;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Repetiviva - For vs While</h3>
+                <ul>
+                    <li>While se ejecuta al menos una vez</li>
+                    <li>Ampliar más información en <a href="https://stackoverflow.com/questions/39969145/while-loops-vs-for-loops-in-javascript">stackoverflow</a>.  </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <!-- <script src="plugin/highlight/highlight.js"></script> -->
+    <script>
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+        });
+    </script>
+</body>
+
+</html>
