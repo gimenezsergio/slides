@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Javascript - Tipos de datos</title>
+
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/simple.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="../plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <style>
+        :root {
+            --r-main-font-size: 20px;
+        }
+
+        .two_columns {
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Javascript - Tipos de datos</h3>
+                <!-- <img src="img/git-github-logo.jpg" alt="Git y GitHub" style="height: 280px; margin: 0 auto 4rem auto; background: transparent;" class="demo-logo"> -->
+                <div class="two_columns">
+                    <div>
+                        <ul>
+                            <li>Números</li>
+                            <li>Textos (string)</li>
+                            <li>Bool</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Objeto</li>
+                            <li>Array</li>
+                            <li>Funciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Números</h3>
+                <pre>
+                    <code>
+                        let entero = 3
+                        let negativo = -56
+                        let decimal = 5.6
+                        console.log(entero)
+                        console.log(decimal)
+                        console.log(negativo)
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Textos (string)</h3>
+                <p>Es una cadena de tetxo que está entre comillas, pueden ser dobles o simples</p>
+                <h4>Concatenar</h4>
+                <pre>
+                    <code>
+                        let cadena1 = 'Este es un texto'
+                        let cadena2 = "Otro texto"
+                    </code>
+                </pre>
+
+                <pre>
+                    <code>
+                        let cadena1 = 'Hola'
+                        let cadena2 = "Luis"
+                        console.log(cadena1 + cadena2)
+                        console.log(cadena1 + ' ' + cadena2)
+                    </code>
+                </pre>
+
+                <h4>Template literals</h4>
+                <pre>
+                    <code>
+                    let myString1 = "Hola";
+                    let myString2 = "mundo";
+
+                    `${myString1} ${myString2}!`  
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Booleans</h3>
+                <p>Solo pueden tener dos valores: true o false. En determinados contextos sirve para tomar desiciones.
+                </p>
+                <pre>
+                    <code>
+                        let producto_entregado = true
+                        console.log(producto_entregado)
+                    </code>
+                </pre>
+
+            </section>
+
+            <section>
+                <h3>Objetos</h3>
+                <p>Los objetos nos sirven para representar la realidad. Tienen características y son capaces de realizar acciones.</p>
+                <div class="two_columns">
+                    <div>
+                        <pre>
+    <code>
+        let usuario = {     
+            nombre: "Juan",
+            apellido: "Mendez"
+            edad: 30,  
+            email: "juan@gmail.com",
+            password: "miclave",
+            nombreCompleto : function() {
+                return this.nombre + " " + this.apellido;
+                }    
+            };
+
+            console.log(usuario.nombre)
+    </code>
+                    </pre>
+                    </div>
+                    <div>
+                        <pre>
+            <code>
+                let auto = {
+                        marca: "Ford",
+                        modelo: "Focus",
+                        color: "Gris"
+                        arrancar: function() {
+                            codigo para arrancar el motor
+                        },
+                        detener: function(){
+                            codigo para detener el motor
+                        } ,
+                        girar_derecha: function() {
+                            Codigo para girar a la derecha
+                        },
+                        girar_izquierda: function() {
+                            Codigo para girar a la izquierda
+                        }
+                }
+            </code>
+                    </pre>
+                    </div>
+                </div>
+
+            </section>
+            <section>
+                <h3>Arrays</h3>
+                <p>Los arrays se usan para guardar colecciones de datos ordenadas</p>
+                <pre>
+                    <code>
+                        const fruits = ["Banana", "Naranja", "Manzana", "Pera"];
+                        let fLen = fruits.length;
+
+                        for (let i = 0; i < fLen; i++) {
+                            console.log(fruits[i])
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Funciones</h3>
+                <p>Las funciones son considerados un tipo de dato</p>
+                <pre>
+                    <code>
+                        let saludar = function(){ 
+                            return "Hello World!"; 
+                        }
+                        console.log(saludar())
+                    </code>
+                </pre>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
+    <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
+    <script src="../plugin/markdown/markdown.js"></script>
+    <!-- <script src="plugin/highlight/highlight.js"></script> -->
+    <script>
+        // Also available as an ES module, see:
+        // https://revealjs.com/initialization/
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+        });
+    </script>
+</body>
+
+</html>
