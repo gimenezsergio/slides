@@ -1,0 +1,9 @@
+:root {  
+    --r-main-font-size: 30px;
+}
+
+.image {
+    height: 280px; 
+    margin: 0 auto 4rem auto; 
+    background: transparent;
+}
