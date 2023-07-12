@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>BOM - DOM</title>
+
+<link rel="stylesheet" href="../dist/reset.css">
+<link rel="stylesheet" href="../dist/reveal.css">
+<link rel="stylesheet" href="../dist/theme/simple.css">
+<link rel="stylesheet" href="../styles.css">
+
+<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h3>BOM - DOM</h3>
+			<a href="">
+				<img src="img/bom-dom.webp" alt="Terminal"
+					 class="demo-logo image">
+			</a>
+
+
+		</section>
+		
+		<section>
+			<h3>Comandos básicos</h3>
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Directorio actual</td>
+						<td>pwd</td>
+					</tr>
+					<tr>
+						<td>Ver archivos y directorios</td>
+						<td>ls, ls-l</td>
+					</tr>
+					<tr>
+						<td>Crear directorios</td>
+						<td>mkdir</td>
+					</tr>
+					<tr>
+						<td>Mover y renombrar archivos y directorios</td>
+						<td>mv</td>
+					</tr>
+					<tr>
+						<td>Borrar archivos y directorios</td>
+						<td>rm</td>
+					</tr>
+					<tr>
+						<td>Cambiar directorios</td>
+						<td>cd</td>
+					</tr>
+					<tr>
+						<td>copiar archivos y directorios</td>
+						<td>cp</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+</div>
+
+<script src="../dist/reveal.js"></script>
+<script src="../plugin/zoom/zoom.js"></script>
+<script src="../plugin/notes/notes.js"></script>
+<script src="../plugin/search/search.js"></script>
+<script src="../plugin/markdown/markdown.js"></script>
+<!-- <script src="plugin/highlight/highlight.js"></script> -->
+<script>
+	// Also available as an ES module, see:
+	// https://revealjs.com/initialization/
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		center: true,
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+	});
+</script>
+</body>
+
+</html>
