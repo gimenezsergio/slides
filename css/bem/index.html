@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>CSS - BEM</title>
+
+<link rel="stylesheet" href="../../dist/reset.css">
+<link rel="stylesheet" href="../../dist/reveal.css">
+<link rel="stylesheet" href="../../dist/theme/simple.css">
+<link rel="stylesheet" href="../../styles.css">
+
+<!-- Theme used for syntax highlighted code -->
+<link rel="stylesheet" href="../../plugin/highlight/monokai.css">
+<link rel="stylesheet"
+	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+</head>
+<body>
+<div class="reveal">
+	<div class="slides">
+		<section>
+			<h3>CSS - BEM</h3>
+			<a href="https://getbem.com/">
+				<img src="img/bem-css.png" alt="BEM"
+					 class="demo-logo image">
+			</a>
+
+
+		</section>
+		<section>
+			<h3>BEM - Beneficios </h3>
+			
+			<ul>
+				<li><strong>Claridad y consistencia:</strong> BEM proporciona una convención clara para nombrar clases, lo que facilita la comprensión del código por parte de otros desarrolladores y garantiza la consistencia en todo el proyecto.</li>
+				<li><strong>Aislamiento de estilos:</strong> al estructurar el CSS en bloques, elementos y modificadores, se reduce la probabilidad de que los estilos se entrelacen y causen conflictos. Esto hace que el mantenimiento y la modificación del código sean más fáciles y seguros.</li>
+				<li><strong>Reutilización de estilos:</strong> al dividir los componentes en bloques y elementos, se pueden reutilizar fácilmente en diferentes partes del sitio web o aplicación, lo que promueve la modularidad y reduce la duplicación de código.</li>
+				<li><strong>Especificidad controlada:</strong> BEM ayuda a evitar la anidación excesiva y la especificidad alta, lo que puede conducir a un código CSS más limpio y menos propenso a errores.</li>
+				<li><strong>Facilita la colaboración:</strong> al seguir una convención de nomenclatura común como BEM, los equipos de desarrollo pueden colaborar de manera más efectiva, ya que todos entienden cómo se estructura y organiza el código CSS.</li>
+			</ul>
+
+
+		</section>
+
+		<section>
+			<h3>Sintáxis </h3>
+			<img src="img/bem-syntaxis.png" alt="">
+		</section>
+		
+		
+	</div>
+</div>
+
+<script src="../../dist/reveal.js"></script>
+<script src="../../plugin/zoom/zoom.js"></script>
+<script src="../../plugin/notes/notes.js"></script>
+<script src="../../plugin/search/search.js"></script>
+<script src="../../plugin/markdown/markdown.js"></script>
+<!-- <script src="plugin/highlight/highlight.js"></script> -->
+<script>
+	// Also available as an ES module, see:
+	// https://revealjs.com/initialization/
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		center: true,
+		hash: true,
+
+		// Learn about plugins: https://revealjs.com/plugins/
+		plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown]
+	});
+</script>
+</body>
+
+</html>
